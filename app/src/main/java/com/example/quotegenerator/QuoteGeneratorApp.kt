@@ -23,6 +23,7 @@ fun quoteGeneratorApp(viewModel: quoteGeneratorViewModel){
     ) {
         Button(onClick = { viewModel.getData() }) {
             Text(text = "Generate")
+            Text(text = "Sanket")
         }
     }
 }
