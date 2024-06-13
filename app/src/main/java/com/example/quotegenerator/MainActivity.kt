@@ -20,15 +20,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        val viewModelProvider = ViewModelProvider(this)[quoteGeneratorViewModel::class.java]
+
         setContent {
             QuoteGeneratorTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    quoteGeneratorApp(viewModel = viewModelProvider)
-                }
+                QuoteGeneratorApp()
             }
         }
     }
