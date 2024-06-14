@@ -23,7 +23,12 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             QuoteGeneratorTheme {
-                QuoteGeneratorApp()
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    QuoteGeneratorApp()
+                }
             }
         }
     }
